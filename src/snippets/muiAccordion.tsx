@@ -6,11 +6,11 @@ export const description = 'MUI <Accordion>'
 export const body = ({
   $,
   Components: { Accordion, AccordionSummary, AccordionDetails, Typography },
-  Icons: { ExpandMoreIcon },
+  Icons: { ExpandMore },
 }: SnippetOptions): React.ReactElement<any> => (
   <Accordion>
     <AccordionSummary
-      expandIcon={<ExpandMoreIcon />}
+      expandIcon={<ExpandMore />}
       aria-label={$('Expand')}
       aria-controls="${id}-content"
       id="${id}-header"
