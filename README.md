@@ -25,6 +25,10 @@ or use the commands to insert snippets instead of suggestions.
 - Automatically adds missing imports when a snippet is inserted (as long as it succeeds in parsing the entire file)
 - You can configure whether to use controlled or uncontrolled form controls in the extension settings.
 
+# Using Material-UI v4?
+
+For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscodeshift/material-ui-snippets) instead. This extension is for MUI v5.
+
 # Settings
 
 ## Form Control Mode
