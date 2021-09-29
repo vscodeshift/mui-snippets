@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <CardMedia>'
+export const description = 'MUI <CardMedia>'
 
 export const body = ({
   Components: { CardMedia },

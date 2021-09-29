@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Switch> with <FormControlLabel>'
+export const description = 'MUI <Switch> with <FormControlLabel>'
 
 export const body = ({
   formControlMode,

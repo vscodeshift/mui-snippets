@@ -2,7 +2,7 @@ import * as React from 'react'
 import { anchors } from './muiDrawerPermanent'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI persistent <Drawer>'
+export const description = 'MUI persistent <Drawer>'
 
 export const body = ({
   $,

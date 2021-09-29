@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <BottomNavigationAction>'
+export const description = 'MUI <BottomNavigationAction>'
 
 export const body = ({
   Components: { BottomNavigationAction },

@@ -1,27 +1,22 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <ExpansionPanel>'
+export const description = 'MUI <Accordion>'
 
 export const body = ({
   $,
-  Components: {
-    ExpansionPanel,
-    ExpansionPanelSummary,
-    ExpansionPanelDetails,
-    Typography,
-  },
+  Components: { Accordion, AccordionSummary, AccordionDetails, Typography },
   Icons: { ExpandMoreIcon },
 }: SnippetOptions): React.ReactElement<any> => (
-  <ExpansionPanel>
-    <ExpansionPanelSummary
+  <Accordion>
+    <AccordionSummary
       expandIcon={<ExpandMoreIcon />}
       aria-label={$('Expand')}
       aria-controls="${id}-content"
       id="${id}-header"
     >
       <Typography $>$</Typography>
-    </ExpansionPanelSummary>
-    <ExpansionPanelDetails>$</ExpansionPanelDetails>
-  </ExpansionPanel>
+    </AccordionSummary>
+    <AccordionDetails>$</AccordionDetails>
+  </Accordion>
 )

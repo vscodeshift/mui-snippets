@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <MenuItem>'
+export const description = 'MUI <MenuItem>'
 
 export const body = ({
   $,

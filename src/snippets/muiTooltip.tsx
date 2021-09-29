@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Tooltip>'
+export const description = 'MUI <Tooltip>'
 
 export const body = ({
   Components: { Tooltip },

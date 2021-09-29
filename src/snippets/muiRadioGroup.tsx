@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <FormControl> with <RadioGroup>'
+export const description = 'MUI <FormControl> with <RadioGroup>'
 
 export const body = ({
   $,

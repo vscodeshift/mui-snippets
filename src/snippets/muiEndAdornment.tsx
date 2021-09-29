@@ -1,4 +1,4 @@
-export const description = 'Material-UI end <InputAdornment>'
+export const description = 'MUI end <InputAdornment>'
 
 export const components = ['InputAdornment']
 

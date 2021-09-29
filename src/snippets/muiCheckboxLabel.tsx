@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Checkbox> with <FormControlLabel>'
+export const description = 'MUI <Checkbox> with <FormControlLabel>'
 
 export const body = ({
   formControlMode,

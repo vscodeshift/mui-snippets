@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SnippetOptions } from './index'
 import { positions, colors } from './muiAppBar'
 
-export const description = 'Material-UI <AppBar> with menu icon'
+export const description = 'MUI <AppBar> with menu icon'
 
 export const body = ({
   forPreview,

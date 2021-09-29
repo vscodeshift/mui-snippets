@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SnippetOptions } from './index'
 import { colors } from './muiAppBar'
 
-export const description = 'Material-UI <Tabs>'
+export const description = 'MUI <Tabs>'
 
 export const body = ({
   $,

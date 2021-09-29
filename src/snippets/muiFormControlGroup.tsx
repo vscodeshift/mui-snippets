@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <FormControl> with <FormGroup>'
+export const description = 'MUI <FormControl> with <FormGroup>'
 
 export const body = ({
   Components: { FormControl, FormLabel, FormGroup, FormHelperText },

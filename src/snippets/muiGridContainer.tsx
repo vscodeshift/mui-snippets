@@ -29,16 +29,16 @@ export const justifies = [
   'space-evenly',
 ]
 
-export const wraps = ['nowrap', 'wrap', 'wrap-reverse']
+export const wraps = ['wrap', 'nowrap', 'wrap-reverse']
 
-export const description = 'Material-UI <Grid container>'
+export const description = 'MUI <Grid container>'
 
 export const body = ({
   $,
 
   Components: { Grid },
 }: SnippetOptions): React.ReactElement<any> => (
-  <Grid container spacing={$} __multiLineChildren $>
+  <Grid container spacing={$(0)} __multiLineChildren $>
     $
   </Grid>
 )

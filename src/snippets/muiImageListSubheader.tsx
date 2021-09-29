@@ -1,18 +1,18 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <GridList> subheader'
+export const description = 'MUI <ImageList> subheader'
 
 export const body = ({
   $,
-  Components: { GridListTile, ListSubheader },
+  Components: { ImageListTile, ListSubheader },
 }: SnippetOptions): React.ReactElement<any> => (
-  <GridListTile
+  <ImageListTile
     cols={$(2)}
     style={{
       height: 'auto',
     }}
   >
     <ListSubheader component="div">$</ListSubheader>
-  </GridListTile>
+  </ImageListTile>
 )

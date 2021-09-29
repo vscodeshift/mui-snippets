@@ -1,7 +1,10 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Snackbar>'
+export const description = 'MUI <Snackbar>'
+
+export const verticalAnchors = ['bottom', 'top']
+export const horizontalAnchors = ['left', 'center', 'right']
 
 export const body = ({
   $,
@@ -12,8 +15,8 @@ export const body = ({
   return (
     <Snackbar
       anchorOrigin={{
-        vertical: '$',
-        horizontal: '$',
+        vertical: $(verticalAnchors),
+        horizontal: $(horizontalAnchors),
       }}
       open={$}
       onClose={$onClose}

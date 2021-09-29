@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SnippetOptions } from './index'
 import { colors } from './muiAppBar'
 
-export const description = 'Material-UI scrollable <Tabs>'
+export const description = 'MUI scrollable <Tabs>'
 
 export const body = ({
   $,

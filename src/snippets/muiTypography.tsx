@@ -1,24 +1,23 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Typography>'
+export const description = 'MUI <Typography>'
 
 const variants = [
+  'body1',
+  'body2',
+  'button',
+  'caption',
   'h1',
   'h2',
   'h3',
   'h4',
   'h5',
   'h6',
+  'inherit',
+  'overline',
   'subtitle1',
   'subtitle2',
-  'body1',
-  'body2',
-  'caption',
-  'button',
-  'overline',
-  'srOnly',
-  'inherit',
 ]
 
 const colors = [

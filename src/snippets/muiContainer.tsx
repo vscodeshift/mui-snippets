@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Container>'
+export const description = 'MUI <Container>'
 
-export const maxWidths = ['xs', 'sm', 'md', 'lg', 'xl']
+export const maxWidths = ['lg', 'xs', 'sm', 'md', 'xl']
 
 export const body = ({
   $,

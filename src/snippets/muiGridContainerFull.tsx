@@ -9,7 +9,7 @@ import {
   wraps,
 } from './muiGridContainer'
 
-export const description = 'Material-UI <Grid container> with all props'
+export const description = 'MUI <Grid container> with all props'
 
 export const body = ({
   $,
@@ -20,7 +20,7 @@ export const body = ({
     container
     spacing__optional={$(1)}
     direction__optional={$(directions)}
-    justify__optional={$(justifies)}
+    justifyContent__optional={$(justifies)}
     alignItems__optional={$(alignItems)}
     alignContent__optional={$(alignContents)}
     wrap__optional={$(wraps)}

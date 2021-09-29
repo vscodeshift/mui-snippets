@@ -1,27 +1,23 @@
-# Snippets for Material-UI
+# Snippets for MUI
 
 ![demo](/docs/snippet.gif?raw=true)
 
-[![CircleCI](https://circleci.com/gh/vscodeshift/material-ui-snippets.svg?style=svg)](https://circleci.com/gh/vscodeshift/material-ui-snippets)
+[![CircleCI](https://circleci.com/gh/vscodeshift/mui-snippets.svg?style=svg)](https://circleci.com/gh/vscodeshift/mui-snippets)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/vscodeshift.material-ui-snippets)](https://marketplace.visualstudio.com/items?itemName=vscodeshift.material-ui-snippets)
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/vscodeshift.mui-snippets)](https://marketplace.visualstudio.com/items?itemName=vscodeshift.mui-snippets)
 
 **Note:** There are two ways to insert these:
 
 - **Trigger Suggest** (<kbd>⌃</kbd><kbd>Space</kbd> on macOS) and then type in the name; or you can
   enable the **Editor: Tab Completion** setting, then type the name of the
   snippet and press <kbd>Tab</kbd>.
-- Execute the corresponding **editor commands** like `Material-UI: insert <Button>` (or even better, make keybindings for them!).
+- Execute the corresponding **editor commands** like `MUI: insert <Button>` (or even better, make keybindings for them!).
 
 **Performance Warning:** Currently, the suggestions can cause performance issues due to VSCode API limitations.
 After the API is improved in an upcoming release I can fix these performance issues. Until then, the workaround
-is to either disable adding automatic imports for snippets (**Settings &gt; Extensions &gt; Material-UI Snippets &gt; Add Completion Imports**)
+is to either disable adding automatic imports for snippets (**Settings &gt; Extensions &gt; MUI Snippets &gt; Add Completion Imports**)
 or use the commands to insert snippets instead of suggestions.
-
-# Using MUI v5?
-
-For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://github.com/vscodeshift/material-ui-snippets/tree/beta). The current production release is for v4. Once MUI v5 is officially released, I'll officially release the next major version of `material-ui-snippets`.
 
 # Features
 
@@ -39,78 +35,110 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 ## Import Paths
 
 - auto - uses top level if other top level imports are found, second level otherwise
-- top level - `import { Button } from '@material-ui/core'`
-- second level - `import Button from '@material-ui/core/Button'`
+- top level - `import { Button } from '@mui/material'`
+- second level - `import Button from '@mui/material/Button'`
 
 # Snippets
 
 <!-- snippets -->
 
-- [`muiAppBar`: &lt;AppBar&gt;](#muiappbar-appbar)
-- [`muiAppBarMenu`: &lt;AppBar&gt; with menu icon](#muiappbarmenu-appbar-with-menu-icon)
-- [`muiBottomNavigation`: &lt;BottomNavigation&gt;](#muibottomnavigation-bottomnavigation)
-- [`muiBottomNavigationAction`: &lt;BottomNavigationAction&gt;](#muibottomnavigationaction-bottomnavigationaction)
-- [`muiButton`: &lt;Button&gt;](#muibutton-button)
-- [`muiButtonGroup`: &lt;ButtonGroup&gt;](#muibuttongroup-buttongroup)
-- [`muiButtonGroupSize`: &lt;ButtonGroup&gt; with size](#muibuttongroupsize-buttongroup-with-size)
-- [`muiButtonGroupVertical`: vertical &lt;ButtonGroup&gt;](#muibuttongroupvertical-vertical-buttongroup)
-- [`muiButtonSize`: &lt;Button&gt; with size](#muibuttonsize-button-with-size)
-- [`muiButtonText`: text &lt;Button&gt;](#muibuttontext-text-button)
-- [`muiButtonWithIcon`: &lt;Button&gt; with icon and label](#muibuttonwithicon-button-with-icon-and-label)
-- [`muiCardHeader`: &lt;CardHeader&gt;](#muicardheader-cardheader)
-- [`muiCardMedia`: &lt;CardMedia&gt;](#muicardmedia-cardmedia)
-- [`muiCheckboxLabel`: &lt;Checkbox&gt; with &lt;FormControlLabel&gt;](#muicheckboxlabel-checkbox-with-formcontrollabel)
-- [`muiCheckboxLabelPlacement`: &lt;Checkbox&gt; with &lt;FormControlLabel&gt;](#muicheckboxlabelplacement-checkbox-with-formcontrollabel)
-- [`muiContainer`: &lt;Container&gt;](#muicontainer-container)
-- [`muiDialog`: &lt;Dialog&gt;](#muidialog-dialog)
-- [`muiDialogSimple`: &lt;Dialog&gt;](#muidialogsimple-dialog)
-- [`muiDrawerPermanent`: permanent &lt;Drawer&gt;](#muidrawerpermanent-permanent-drawer)
-- [`muiDrawerPersistent`: persistent &lt;Drawer&gt;](#muidrawerpersistent-persistent-drawer)
-- [`muiDrawerTemporary`: temporary &lt;Drawer&gt;](#muidrawertemporary-temporary-drawer)
-- [`muiEndAdornment`: end &lt;InputAdornment&gt;](#muiendadornment-end-inputadornment)
-- [`muiExpansionPanel`: &lt;ExpansionPanel&gt;](#muiexpansionpanel-expansionpanel)
-- [`muiExpansionPanelControlled`: controlled &lt;ExpansionPanel&gt;](#muiexpansionpanelcontrolled-controlled-expansionpanel)
-- [`muiFab`: &lt;Fab&gt;](#muifab-fab)
-- [`muiFabExtended`: &lt;Fab variant="extended"&gt;](#muifabextended-fab-variantextended)
-- [`muiFormControl`: &lt;FormControl&gt;](#muiformcontrol-formcontrol)
-- [`muiFormControlGroup`: &lt;FormControl&gt; with &lt;FormGroup&gt;](#muiformcontrolgroup-formcontrol-with-formgroup)
-- [`muiGridContainer`: &lt;Grid container&gt;](#muigridcontainer-grid-container)
-- [`muiGridContainerCenter`: &lt;Grid container&gt; with centering](#muigridcontainercenter-grid-container-with-centering)
-- [`muiGridContainerFull`: &lt;Grid container&gt; with all props](#muigridcontainerfull-grid-container-with-all-props)
-- [`muiGridListSubheader`: &lt;GridList&gt; subheader](#muigridlistsubheader-gridlist-subheader)
-- [`muiGridListTilebar`: &lt;GridListTileBar&gt;](#muigridlisttilebar-gridlisttilebar)
-- [`muiIconButton`: &lt;IconButton&gt;](#muiiconbutton-iconbutton)
-- [`muiMenu`: &lt;Menu&gt;](#muimenu-menu)
-- [`muiMenuItem`: &lt;MenuItem&gt;](#muimenuitem-menuitem)
-- [`muiMenuPopupState`: &lt;Menu&gt; for material-ui-popup-state](#muimenupopupstate-menu-for-material-ui-popup-state)
-- [`muiRadioGroup`: &lt;FormControl&gt; with &lt;RadioGroup&gt;](#muiradiogroup-formcontrol-with-radiogroup)
-- [`muiRadioLabel`: &lt;Radio&gt; with &lt;FormControlLabel&gt;](#muiradiolabel-radio-with-formcontrollabel)
-- [`muiRadioLabelPlacement`: &lt;Radio&gt; with &lt;FormControlLabel&gt; with labelPlacement](#muiradiolabelplacement-radio-with-formcontrollabel-with-labelplacement)
-- [`muiSelectItem`: &lt;MenuItem&gt; inside &lt;Select&gt;](#muiselectitem-menuitem-inside-select)
-- [`muiSliderContinuous`: &lt;Slider&gt; with continuous values](#muislidercontinuous-slider-with-continuous-values)
-- [`muiSliderDiscrete`: &lt;Slider&gt; with discrete values](#muisliderdiscrete-slider-with-discrete-values)
-- [`muiSnackbar`: &lt;Snackbar&gt;](#muisnackbar-snackbar)
-- [`muiSnackbarContent`: &lt;SnackbarContent&gt;](#muisnackbarcontent-snackbarcontent)
-- [`muiStartAdornment`: start &lt;InputAdornment&gt;](#muistartadornment-start-inputadornment)
-- [`muiStep`: &lt;Step&gt;](#muistep-step)
-- [`muiStepContent`: &lt;Step&gt; with &lt;StepContent&gt;](#muistepcontent-step-with-stepcontent)
-- [`muiStepOptional`: optional &lt;Step&gt;](#muistepoptional-optional-step)
-- [`muiStepper`: &lt;Stepper&gt;](#muistepper-stepper)
-- [`muiSwipeableViews`: &lt;SwipeableViews&gt;](#muiswipeableviews-swipeableviews)
-- [`muiSwitch`: &lt;Switch&gt;](#muiswitch-switch)
-- [`muiSwitchLabel`: &lt;Switch&gt; with &lt;FormControlLabel&gt;](#muiswitchlabel-switch-with-formcontrollabel)
-- [`muiSwitchLabelPlacement`: &lt;Switch&gt; with &lt;FormControlLabel&gt; with labelPlacement](#muiswitchlabelplacement-switch-with-formcontrollabel-with-labelplacement)
-- [`muiTabPanel`: &lt;TabPanel&gt;](#muitabpanel-tabpanel)
-- [`muiTabs`: &lt;Tabs&gt;](#muitabs-tabs)
-- [`muiTabsScrollable`: scrollable &lt;Tabs&gt;](#muitabsscrollable-scrollable-tabs)
-- [`muiTextField`: &lt;TextField&gt;](#muitextfield-textfield)
-- [`muiTextFieldMore`: &lt;TextField&gt; with more props](#muitextfieldmore-textfield-with-more-props)
-- [`muiTextFieldSelect`: &lt;TextField select&gt;](#muitextfieldselect-textfield-select)
-- [`muiTextFieldVariant`: &lt;TextField&gt; with variant](#muitextfieldvariant-textfield-with-variant)
-- [`muiTooltip`: &lt;Tooltip&gt;](#muitooltip-tooltip)
-- [`muiTypography`: &lt;Typography&gt;](#muitypography-typography)
+- [`muiAccordion`: MUI &lt;Accordion&gt;](#muiaccordion-mui-accordion)
+- [`muiAccordionControlled`: MUI controlled &lt;Accordion&gt;](#muiaccordioncontrolled-mui-controlled-accordion)
+- [`muiAppBar`: MUI &lt;AppBar&gt;](#muiappbar-mui-appbar)
+- [`muiAppBarMenu`: MUI &lt;AppBar&gt; with menu icon](#muiappbarmenu-mui-appbar-with-menu-icon)
+- [`muiBottomNavigation`: MUI &lt;BottomNavigation&gt;](#muibottomnavigation-mui-bottomnavigation)
+- [`muiBottomNavigationAction`: MUI &lt;BottomNavigationAction&gt;](#muibottomnavigationaction-mui-bottomnavigationaction)
+- [`muiButton`: MUI &lt;Button&gt;](#muibutton-mui-button)
+- [`muiButtonGroup`: MUI &lt;ButtonGroup&gt;](#muibuttongroup-mui-buttongroup)
+- [`muiButtonGroupSize`: MUI &lt;ButtonGroup&gt; with size](#muibuttongroupsize-mui-buttongroup-with-size)
+- [`muiButtonGroupVertical`: MUI vertical &lt;ButtonGroup&gt;](#muibuttongroupvertical-mui-vertical-buttongroup)
+- [`muiButtonSize`: MUI &lt;Button&gt; with size](#muibuttonsize-mui-button-with-size)
+- [`muiButtonText`: MUI text &lt;Button&gt;](#muibuttontext-mui-text-button)
+- [`muiButtonWithIcon`: MUI &lt;Button&gt; with icon and label](#muibuttonwithicon-mui-button-with-icon-and-label)
+- [`muiCardHeader`: MUI &lt;CardHeader&gt;](#muicardheader-mui-cardheader)
+- [`muiCardMedia`: MUI &lt;CardMedia&gt;](#muicardmedia-mui-cardmedia)
+- [`muiCheckboxLabel`: MUI &lt;Checkbox&gt; with &lt;FormControlLabel&gt;](#muicheckboxlabel-mui-checkbox-with-formcontrollabel)
+- [`muiCheckboxLabelPlacement`: MUI &lt;Checkbox&gt; with &lt;FormControlLabel&gt;](#muicheckboxlabelplacement-mui-checkbox-with-formcontrollabel)
+- [`muiContainer`: MUI &lt;Container&gt;](#muicontainer-mui-container)
+- [`muiDialog`: MUI &lt;Dialog&gt;](#muidialog-mui-dialog)
+- [`muiDialogSimple`: MUI &lt;Dialog&gt;](#muidialogsimple-mui-dialog)
+- [`muiDrawerPermanent`: MUI permanent &lt;Drawer&gt;](#muidrawerpermanent-mui-permanent-drawer)
+- [`muiDrawerPersistent`: MUI persistent &lt;Drawer&gt;](#muidrawerpersistent-mui-persistent-drawer)
+- [`muiDrawerTemporary`: MUI temporary &lt;Drawer&gt;](#muidrawertemporary-mui-temporary-drawer)
+- [`muiEndAdornment`: MUI end &lt;InputAdornment&gt;](#muiendadornment-mui-end-inputadornment)
+- [`muiFab`: MUI &lt;Fab&gt;](#muifab-mui-fab)
+- [`muiFabExtended`: MUI &lt;Fab variant="extended"&gt;](#muifabextended-mui-fab-variantextended)
+- [`muiFormControl`: MUI &lt;FormControl&gt;](#muiformcontrol-mui-formcontrol)
+- [`muiFormControlGroup`: MUI &lt;FormControl&gt; with &lt;FormGroup&gt;](#muiformcontrolgroup-mui-formcontrol-with-formgroup)
+- [`muiGridContainer`: MUI &lt;Grid container&gt;](#muigridcontainer-mui-grid-container)
+- [`muiGridContainerCenter`: MUI &lt;Grid container&gt; with centering](#muigridcontainercenter-mui-grid-container-with-centering)
+- [`muiGridContainerFull`: MUI &lt;Grid container&gt; with all props](#muigridcontainerfull-mui-grid-container-with-all-props)
+- [`muiIconButton`: MUI &lt;IconButton&gt;](#muiiconbutton-mui-iconbutton)
+- [`muiImageListSubheader`: MUI &lt;ImageList&gt; subheader](#muiimagelistsubheader-mui-imagelist-subheader)
+- [`muiImageListTilebar`: MUI &lt;ImageListTileBar&gt;](#muiimagelisttilebar-mui-imagelisttilebar)
+- [`muiMenu`: MUI &lt;Menu&gt;](#muimenu-mui-menu)
+- [`muiMenuItem`: MUI &lt;MenuItem&gt;](#muimenuitem-mui-menuitem)
+- [`muiMenuPopupState`: MUI &lt;Menu&gt; for material-ui-popup-state](#muimenupopupstate-mui-menu-for-material-ui-popup-state)
+- [`muiRadioGroup`: MUI &lt;FormControl&gt; with &lt;RadioGroup&gt;](#muiradiogroup-mui-formcontrol-with-radiogroup)
+- [`muiRadioLabel`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt;](#muiradiolabel-mui-radio-with-formcontrollabel)
+- [`muiRadioLabelPlacement`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt; with labelPlacement](#muiradiolabelplacement-mui-radio-with-formcontrollabel-with-labelplacement)
+- [`muiSelectItem`: MUI &lt;MenuItem&gt; inside &lt;Select&gt;](#muiselectitem-mui-menuitem-inside-select)
+- [`muiSliderContinuous`: MUI &lt;Slider&gt; with continuous values](#muislidercontinuous-mui-slider-with-continuous-values)
+- [`muiSliderDiscrete`: MUI &lt;Slider&gt; with discrete values](#muisliderdiscrete-mui-slider-with-discrete-values)
+- [`muiSnackbar`: MUI &lt;Snackbar&gt;](#muisnackbar-mui-snackbar)
+- [`muiSnackbarContent`: MUI &lt;SnackbarContent&gt;](#muisnackbarcontent-mui-snackbarcontent)
+- [`muiStartAdornment`: MUI start &lt;InputAdornment&gt;](#muistartadornment-mui-start-inputadornment)
+- [`muiStep`: MUI &lt;Step&gt;](#muistep-mui-step)
+- [`muiStepContent`: MUI &lt;Step&gt; with &lt;StepContent&gt;](#muistepcontent-mui-step-with-stepcontent)
+- [`muiStepOptional`: MUI optional &lt;Step&gt;](#muistepoptional-mui-optional-step)
+- [`muiStepper`: MUI &lt;Stepper&gt;](#muistepper-mui-stepper)
+- [`muiSwipeableViews`: MUI &lt;SwipeableViews&gt;](#muiswipeableviews-mui-swipeableviews)
+- [`muiSwitch`: MUI &lt;Switch&gt;](#muiswitch-mui-switch)
+- [`muiSwitchLabel`: MUI &lt;Switch&gt; with &lt;FormControlLabel&gt;](#muiswitchlabel-mui-switch-with-formcontrollabel)
+- [`muiSwitchLabelPlacement`: MUI &lt;Switch&gt; with &lt;FormControlLabel&gt; with labelPlacement](#muiswitchlabelplacement-mui-switch-with-formcontrollabel-with-labelplacement)
+- [`muiTabPanel`: MUI &lt;TabPanel&gt;](#muitabpanel-mui-tabpanel)
+- [`muiTabs`: MUI &lt;Tabs&gt;](#muitabs-mui-tabs)
+- [`muiTabsScrollable`: MUI scrollable &lt;Tabs&gt;](#muitabsscrollable-mui-scrollable-tabs)
+- [`muiTextField`: MUI &lt;TextField&gt;](#muitextfield-mui-textfield)
+- [`muiTextFieldMore`: MUI &lt;TextField&gt; with more props](#muitextfieldmore-mui-textfield-with-more-props)
+- [`muiTextFieldSelect`: MUI &lt;TextField select&gt;](#muitextfieldselect-mui-textfield-select)
+- [`muiTextFieldVariant`: MUI &lt;TextField&gt; with variant](#muitextfieldvariant-mui-textfield-with-variant)
+- [`muiTooltip`: MUI &lt;Tooltip&gt;](#muitooltip-mui-tooltip)
+- [`muiTypography`: MUI &lt;Typography&gt;](#muitypography-mui-typography)
 
-### `muiAppBar`: &lt;AppBar&gt;
+### `muiAccordion`: MUI &lt;Accordion&gt;
+
+```
+<Accordion>
+  <AccordionSummary
+    expandIcon={<ExpandMoreIcon />}
+    aria-label="${1:Expand}"
+    aria-controls="$2-content"
+    id="$2-header"
+  >
+    <Typography$3>$4</Typography>
+  </AccordionSummary>
+  <AccordionDetails>$5</AccordionDetails>
+</Accordion>
+```
+
+### `muiAccordionControlled`: MUI controlled &lt;Accordion&gt;
+
+```
+<Accordion expanded={$1} onChange={$2}>
+  <AccordionSummary
+    expandIcon={<ExpandMore />}
+    aria-label="${3:Expand}"
+    aria-controls="$4-content"
+    id="$4-header"
+  >
+    <Typography$5>$6</Typography>
+  </AccordionSummary>
+  <AccordionDetails>$7</AccordionDetails>
+</Accordion>
+```
+
+### `muiAppBar`: MUI &lt;AppBar&gt;
 
 ```
 <AppBar position="${1|fixed,absolute,relative,static,sticky|}" color="${2|primary,default,inherit,secondary,transparent|}">
@@ -122,7 +150,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </AppBar>
 ```
 
-### `muiAppBarMenu`: &lt;AppBar&gt; with menu icon
+### `muiAppBarMenu`: MUI &lt;AppBar&gt; with menu icon
 
 ```
 <AppBar position="${1|fixed,absolute,relative,static,sticky|}" color="${2|primary,default,inherit,secondary,transparent|}">
@@ -137,7 +165,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </AppBar>
 ```
 
-### `muiBottomNavigation`: &lt;BottomNavigation&gt;
+### `muiBottomNavigation`: MUI &lt;BottomNavigation&gt;
 
 ```
 <BottomNavigation value={$1} onChange={$2}$3>
@@ -145,56 +173,56 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </BottomNavigation>
 ```
 
-### `muiBottomNavigationAction`: &lt;BottomNavigationAction&gt;
+### `muiBottomNavigationAction`: MUI &lt;BottomNavigationAction&gt;
 
 ```
 <BottomNavigationAction label="$1" value={$2} icon={$3}$4 />
 ```
 
-### `muiButton`: &lt;Button&gt;
+### `muiButton`: MUI &lt;Button&gt;
 
 ```
-<Button variant="${1|text,contained,outlined|}" color="${2|default,inherit,primary,secondary|}"$3>
+<Button variant="${1|text,contained,outlined|}" color="${2|primary,secondary,inherit,success,error,info,warning|}"$3>
   $4
 </Button>
 ```
 
-### `muiButtonGroup`: &lt;ButtonGroup&gt;
+### `muiButtonGroup`: MUI &lt;ButtonGroup&gt;
 
 ```
-<ButtonGroup variant="${1|text,contained,outlined|}" color="${2|default,inherit,primary,secondary|}" aria-label="$3"$4>
+<ButtonGroup variant="${1|text,contained,outlined|}" color="${2|primary,secondary,inherit,success,error,info,warning|}" aria-label="$3"$4>
   <Button>$5</Button>
   <Button>$6</Button>
   $7
 </ButtonGroup>
 ```
 
-### `muiButtonGroupSize`: &lt;ButtonGroup&gt; with size
+### `muiButtonGroupSize`: MUI &lt;ButtonGroup&gt; with size
 
 ```
-<ButtonGroup variant="${1|text,contained,outlined|}" color="${2|default,inherit,primary,secondary|}" size="${3|small,medium,large|}" aria-label="$4"$5>
+<ButtonGroup variant="${1|text,contained,outlined|}" color="${2|primary,secondary,inherit,success,error,info,warning|}" size="${3|small,medium,large|}" aria-label="$4"$5>
   <Button>$6</Button>
   <Button>$7</Button>
   $8
 </ButtonGroup>
 ```
 
-### `muiButtonGroupVertical`: vertical &lt;ButtonGroup&gt;
+### `muiButtonGroupVertical`: MUI vertical &lt;ButtonGroup&gt;
 
 ```
-<ButtonGroup orientation="vertical" variant="${1|text,contained,outlined|}" color="${2|default,inherit,primary,secondary|}" aria-label="$3"$4>
+<ButtonGroup orientation="vertical" variant="${1|text,contained,outlined|}" color="${2|primary,secondary,inherit,success,error,info,warning|}" aria-label="$3"$4>
   <Button>$5</Button>
   <Button>$6</Button>
   $7
 </ButtonGroup>
 ```
 
-### `muiButtonSize`: &lt;Button&gt; with size
+### `muiButtonSize`: MUI &lt;Button&gt; with size
 
 ```
 <Button
   variant="${1|text,contained,outlined|}"
-  color="${2|default,inherit,primary,secondary|}"
+  color="${2|primary,secondary,inherit,success,error,info,warning|}"
   size="${3|small,medium,large|}"
   $4
 >
@@ -202,18 +230,23 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </Button>
 ```
 
-### `muiButtonText`: text &lt;Button&gt;
+### `muiButtonText`: MUI text &lt;Button&gt;
 
 ```
-<Button color="${1|default,inherit,primary,secondary|}"$2>$3</Button>
+<Button
+  color="${1|primary,secondary,inherit,success,error,info,warning|}"
+  $2
+>
+  $3
+</Button>
 ```
 
-### `muiButtonWithIcon`: &lt;Button&gt; with icon and label
+### `muiButtonWithIcon`: MUI &lt;Button&gt; with icon and label
 
 ```
 <Button
   variant="${1|text,contained,outlined|}"
-  color="${2|default,inherit,primary,secondary|}"
+  color="${2|primary,secondary,inherit,success,error,info,warning|}"
   startIcon={$3}
   $4
 >
@@ -221,7 +254,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </Button>
 ```
 
-### `muiCardHeader`: &lt;CardHeader&gt;
+### `muiCardHeader`: MUI &lt;CardHeader&gt;
 
 ```
 <CardHeader${1:
@@ -241,13 +274,13 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 />
 ```
 
-### `muiCardMedia`: &lt;CardMedia&gt;
+### `muiCardMedia`: MUI &lt;CardMedia&gt;
 
 ```
 <CardMedia title="$1" image="$2" />
 ```
 
-### `muiCheckboxLabel`: &lt;Checkbox&gt; with &lt;FormControlLabel&gt;
+### `muiCheckboxLabel`: MUI &lt;Checkbox&gt; with &lt;FormControlLabel&gt;
 
 #### Controlled
 
@@ -280,7 +313,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 />
 ```
 
-### `muiCheckboxLabelPlacement`: &lt;Checkbox&gt; with &lt;FormControlLabel&gt;
+### `muiCheckboxLabelPlacement`: MUI &lt;Checkbox&gt; with &lt;FormControlLabel&gt;
 
 #### Controlled
 
@@ -315,15 +348,15 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 />
 ```
 
-### `muiContainer`: &lt;Container&gt;
+### `muiContainer`: MUI &lt;Container&gt;
 
 ```
-<Container maxWidth="${1|xs,sm,md,lg,xl|}"$2>
+<Container maxWidth="${1|lg,xs,sm,md,xl|}"$2>
   $3
 </Container>
 ```
 
-### `muiDialog`: &lt;Dialog&gt;
+### `muiDialog`: MUI &lt;Dialog&gt;
 
 ```
 <Dialog open={$1} onClose={$2} aria-labelledby={$3}>${4:
@@ -336,14 +369,17 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
     </DialogContentText>}
   </DialogContent>}${9:
   <DialogActions>
-    <Button onClick={$10\} color="${11|default,inherit,primary,secondary|}">${12:
+    <Button
+      onClick={$10\}
+      color="${11|primary,secondary,inherit,success,error,info,warning|}"
+    >${12:
       Cancel}
     </Button>
   </DialogActions>}
 </Dialog>
 ```
 
-### `muiDialogSimple`: &lt;Dialog&gt;
+### `muiDialogSimple`: MUI &lt;Dialog&gt;
 
 ```
 <Dialog open={$1} onClose={$2} aria-labelledby="$3">
@@ -351,7 +387,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </Dialog>
 ```
 
-### `muiDrawerPermanent`: permanent &lt;Drawer&gt;
+### `muiDrawerPermanent`: MUI permanent &lt;Drawer&gt;
 
 ```
 <Drawer variant="permanent" anchor="${1|left,right,top,bottom|}"$2>
@@ -359,7 +395,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </Drawer>
 ```
 
-### `muiDrawerPersistent`: persistent &lt;Drawer&gt;
+### `muiDrawerPersistent`: MUI persistent &lt;Drawer&gt;
 
 ```
 <Drawer
@@ -372,7 +408,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </Drawer>
 ```
 
-### `muiDrawerTemporary`: temporary &lt;Drawer&gt;
+### `muiDrawerTemporary`: MUI temporary &lt;Drawer&gt;
 
 ```
 <Drawer
@@ -386,7 +422,7 @@ For MUI v5 you'll need the beta version of [`material-ui-snippets`](https://gith
 </Drawer>
 ```
 
-### `muiEndAdornment`: end &lt;InputAdornment&gt;
+### `muiEndAdornment`: MUI end &lt;InputAdornment&gt;
 
 ```
 
@@ -398,56 +434,28 @@ endAdornment={
 
 ```
 
-### `muiExpansionPanel`: &lt;ExpansionPanel&gt;
+### `muiFab`: MUI &lt;Fab&gt;
 
 ```
-<ExpansionPanel>
-  <ExpansionPanelSummary
-    expandIcon={<ExpandMoreIcon />}
-    aria-label="${1:Expand}"
-    aria-controls="$2-content"
-    id="$2-header"
-  >
-    <Typography$3>$4</Typography>
-  </ExpansionPanelSummary>
-  <ExpansionPanelDetails>$5</ExpansionPanelDetails>
-</ExpansionPanel>
-```
-
-### `muiExpansionPanelControlled`: controlled &lt;ExpansionPanel&gt;
-
-```
-<ExpansionPanel expanded={$1} onChange={$2}>
-  <ExpansionPanelSummary
-    expandIcon={<ExpandMore />}
-    aria-label="${3:Expand}"
-    aria-controls="$4-content"
-    id="$4-header"
-  >
-    <Typography$5>$6</Typography>
-  </ExpansionPanelSummary>
-  <ExpansionPanelDetails>$7</ExpansionPanelDetails>
-</ExpansionPanel>
-```
-
-### `muiFab`: &lt;Fab&gt;
-
-```
-<Fab color="${1|default,inherit,primary,secondary|}" aria-label="$2"$3>
+<Fab
+  color="${1|primary,secondary,inherit,success,error,info,warning|}"
+  aria-label="$2"
+  $3
+>
   <$4Icon />
 </Fab>
 ```
 
-### `muiFabExtended`: &lt;Fab variant="extended"&gt;
+### `muiFabExtended`: MUI &lt;Fab variant="extended"&gt;
 
 ```
-<Fab variant="extended" color="${1|default,inherit,primary,secondary|}" aria-label="$2"$3>
-  <Box marginRight={1}><$4Icon /></Box>
-  $5
+<Fab variant="${1|circular,extended|}" color="${2|default,inherit,primary,secondary|}" size="${3|large,medium,small|}" aria-label="$4"$5>
+  <Box marginRight={1}><$6Icon /></Box>
+  $7
 </Fab>
 ```
 
-### `muiFormControl`: &lt;FormControl&gt;
+### `muiFormControl`: MUI &lt;FormControl&gt;
 
 ```
 <FormControl$1>
@@ -457,7 +465,7 @@ endAdornment={
 </FormControl>
 ```
 
-### `muiFormControlGroup`: &lt;FormControl&gt; with &lt;FormGroup&gt;
+### `muiFormControlGroup`: MUI &lt;FormControl&gt; with &lt;FormGroup&gt;
 
 ```
 <FormControl component=${1:"fieldset"}$2>
@@ -469,60 +477,68 @@ endAdornment={
 </FormControl>
 ```
 
-### `muiGridContainer`: &lt;Grid container&gt;
+### `muiGridContainer`: MUI &lt;Grid container&gt;
 
 ```
-<Grid container spacing={$1}$2>
+<Grid container spacing={${1:0}}$2>
   $3
 </Grid>
 ```
 
-### `muiGridContainerCenter`: &lt;Grid container&gt; with centering
+### `muiGridContainerCenter`: MUI &lt;Grid container&gt; with centering
 
 ```
 <Grid
   container
   spacing={${1:1}}${2:
   direction="${3|row,row-reverse,column,column-reverse|}"}
-  justify="${4:center}"
+  justifyContent="${4:center}"
   alignItems="${5:center}"
   alignContent="${6:center}"${7:
-  wrap="${8|nowrap,wrap,wrap-reverse|}"}
+  wrap="${8|wrap,nowrap,wrap-reverse|}"}
   $9
 >
   $10
 </Grid>
 ```
 
-### `muiGridContainerFull`: &lt;Grid container&gt; with all props
+### `muiGridContainerFull`: MUI &lt;Grid container&gt; with all props
 
 ```
 <Grid
   container${1:
   spacing={${2:1}\}}${3:
   direction="${4|row,row-reverse,column,column-reverse|}"}${5:
-  justify="${6|flex-start,center,flex-end,space-between,space-around,space-evenly|}"}${7:
+  justifyContent="${6|flex-start,center,flex-end,space-between,space-around,space-evenly|}"}${7:
   alignItems="${8|flex-start,center,flex-end,stretch,baseline|}"}${9:
   alignContent="${10|stretch,center,flex-start,flex-end,space-between,space-around|}"}${11:
-  wrap="${12|nowrap,wrap,wrap-reverse|}"}
+  wrap="${12|wrap,nowrap,wrap-reverse|}"}
   $13
 >
   $14
 </Grid>
 ```
 
-### `muiGridListSubheader`: &lt;GridList&gt; subheader
+### `muiIconButton`: MUI &lt;IconButton&gt;
 
 ```
-<GridListTile cols={${1:2}} style={{ height: 'auto' }}>
+<IconButton aria-label="$1" onClick={$2}$3>
+  $4
+</IconButton>
+```
+
+### `muiImageListSubheader`: MUI &lt;ImageList&gt; subheader
+
+```
+<ImageListTile cols={${1:2}} style={{ height: 'auto' }}>
   <ListSubheader component="div">$2</ListSubheader>
-</GridListTile>
+</ImageListTile>
 ```
 
-### `muiGridListTilebar`: &lt;GridListTileBar&gt;
+### `muiImageListTilebar`: MUI &lt;ImageListTileBar&gt;
 
 ```
-<GridListTileBar${1:
+<ImageListTileBar${1:
   title="$2"}${3:
   subtitle="$4"}${5:
   actionIcon={
@@ -533,15 +549,7 @@ endAdornment={
 />
 ```
 
-### `muiIconButton`: &lt;IconButton&gt;
-
-```
-<IconButton aria-label="$1" onClick={$2}$3>
-  $4
-</IconButton>
-```
-
-### `muiMenu`: &lt;Menu&gt;
+### `muiMenu`: MUI &lt;Menu&gt;
 
 ```
 <Menu id="$1" anchorEl={$2} keepMounted open={Boolean($2)} onClose={$3}$4>
@@ -549,13 +557,13 @@ endAdornment={
 </Menu>
 ```
 
-### `muiMenuItem`: &lt;MenuItem&gt;
+### `muiMenuItem`: MUI &lt;MenuItem&gt;
 
 ```
 <MenuItem onClick={$1}$2>$3</MenuItem>
 ```
 
-### `muiMenuPopupState`: &lt;Menu&gt; for material-ui-popup-state
+### `muiMenuPopupState`: MUI &lt;Menu&gt; for material-ui-popup-state
 
 ```
 <Menu
@@ -568,7 +576,7 @@ endAdornment={
 </Menu>
 ```
 
-### `muiRadioGroup`: &lt;FormControl&gt; with &lt;RadioGroup&gt;
+### `muiRadioGroup`: MUI &lt;FormControl&gt; with &lt;RadioGroup&gt;
 
 ```
 <FormControl component=${1:"fieldset"}$2>
@@ -578,13 +586,13 @@ endAdornment={
 </FormControl>
 ```
 
-### `muiRadioLabel`: &lt;Radio&gt; with &lt;FormControlLabel&gt;
+### `muiRadioLabel`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt;
 
 ```
 <FormControlLabel value="$1" label="$2" control={<Radio$3 />} />
 ```
 
-### `muiRadioLabelPlacement`: &lt;Radio&gt; with &lt;FormControlLabel&gt; with labelPlacement
+### `muiRadioLabelPlacement`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt; with labelPlacement
 
 ```
 <FormControlLabel
@@ -595,13 +603,13 @@ endAdornment={
 />
 ```
 
-### `muiSelectItem`: &lt;MenuItem&gt; inside &lt;Select&gt;
+### `muiSelectItem`: MUI &lt;MenuItem&gt; inside &lt;Select&gt;
 
 ```
 <MenuItem value={$1}$2>$3</MenuItem>
 ```
 
-### `muiSliderContinuous`: &lt;Slider&gt; with continuous values
+### `muiSliderContinuous`: MUI &lt;Slider&gt; with continuous values
 
 #### Controlled
 
@@ -628,7 +636,7 @@ endAdornment={
 />
 ```
 
-### `muiSliderDiscrete`: &lt;Slider&gt; with discrete values
+### `muiSliderDiscrete`: MUI &lt;Slider&gt; with discrete values
 
 #### Controlled
 
@@ -659,11 +667,11 @@ endAdornment={
 />
 ```
 
-### `muiSnackbar`: &lt;Snackbar&gt;
+### `muiSnackbar`: MUI &lt;Snackbar&gt;
 
 ```
 <Snackbar
-  anchorOrigin={{ vertical: '$1', horizontal: '$2' }}
+  anchorOrigin={{ vertical: ${1|bottom,top|}, horizontal: ${2|left,center,right|} }}
   open={$3}
   onClose={$4}
   message="$5"${6:
@@ -675,13 +683,13 @@ endAdornment={
 />
 ```
 
-### `muiSnackbarContent`: &lt;SnackbarContent&gt;
+### `muiSnackbarContent`: MUI &lt;SnackbarContent&gt;
 
 ```
 <SnackbarContent message="$1" action={$2} />
 ```
 
-### `muiStartAdornment`: start &lt;InputAdornment&gt;
+### `muiStartAdornment`: MUI start &lt;InputAdornment&gt;
 
 ```
 
@@ -693,7 +701,7 @@ startAdornment={
 
 ```
 
-### `muiStep`: &lt;Step&gt;
+### `muiStep`: MUI &lt;Step&gt;
 
 ```
 <Step key={$1} completed={$2}$3>
@@ -701,7 +709,7 @@ startAdornment={
 </Step>
 ```
 
-### `muiStepContent`: &lt;Step&gt; with &lt;StepContent&gt;
+### `muiStepContent`: MUI &lt;Step&gt; with &lt;StepContent&gt;
 
 ```
 <Step key={$1} completed={$2}$3>
@@ -712,7 +720,7 @@ startAdornment={
 </Step>
 ```
 
-### `muiStepOptional`: optional &lt;Step&gt;
+### `muiStepOptional`: MUI optional &lt;Step&gt;
 
 ```
 <Step key={$1} completed={$2}$3>
@@ -724,7 +732,7 @@ startAdornment={
 </Step>
 ```
 
-### `muiStepper`: &lt;Stepper&gt;
+### `muiStepper`: MUI &lt;Stepper&gt;
 
 ```
 <Stepper activeStep={$1}>
@@ -732,7 +740,7 @@ startAdornment={
 </Stepper>
 ```
 
-### `muiSwipeableViews`: &lt;SwipeableViews&gt;
+### `muiSwipeableViews`: MUI &lt;SwipeableViews&gt;
 
 ```
 <SwipeableViews
@@ -745,7 +753,7 @@ startAdornment={
 </SwipeableViews>
 ```
 
-### `muiSwitch`: &lt;Switch&gt;
+### `muiSwitch`: MUI &lt;Switch&gt;
 
 #### Controlled
 
@@ -770,7 +778,7 @@ startAdornment={
 />
 ```
 
-### `muiSwitchLabel`: &lt;Switch&gt; with &lt;FormControlLabel&gt;
+### `muiSwitchLabel`: MUI &lt;Switch&gt; with &lt;FormControlLabel&gt;
 
 #### Controlled
 
@@ -803,7 +811,7 @@ startAdornment={
 />
 ```
 
-### `muiSwitchLabelPlacement`: &lt;Switch&gt; with &lt;FormControlLabel&gt; with labelPlacement
+### `muiSwitchLabelPlacement`: MUI &lt;Switch&gt; with &lt;FormControlLabel&gt; with labelPlacement
 
 #### Controlled
 
@@ -838,7 +846,7 @@ startAdornment={
 />
 ```
 
-### `muiTabPanel`: &lt;TabPanel&gt;
+### `muiTabPanel`: MUI &lt;TabPanel&gt;
 
 ```
 <TabPanel value={$1} index={$2} ${3:dir={theme.direction\}}$4>
@@ -846,7 +854,7 @@ startAdornment={
 </TabPanel>
 ```
 
-### `muiTabs`: &lt;Tabs&gt;
+### `muiTabs`: MUI &lt;Tabs&gt;
 
 ```
 <AppBar position="static" color="${1|primary,default,inherit,secondary,transparent|}"$2>
@@ -856,7 +864,7 @@ startAdornment={
 </AppBar>
 ```
 
-### `muiTabsScrollable`: scrollable &lt;Tabs&gt;
+### `muiTabsScrollable`: MUI scrollable &lt;Tabs&gt;
 
 ```
 <AppBar position="static" color="${1|primary,default,inherit,secondary,transparent|}"$2>
@@ -873,7 +881,7 @@ startAdornment={
 </AppBar>
 ```
 
-### `muiTextField`: &lt;TextField&gt;
+### `muiTextField`: MUI &lt;TextField&gt;
 
 #### Controlled
 
@@ -898,7 +906,7 @@ startAdornment={
 />
 ```
 
-### `muiTextFieldMore`: &lt;TextField&gt; with more props
+### `muiTextFieldMore`: MUI &lt;TextField&gt; with more props
 
 #### Controlled
 
@@ -906,7 +914,7 @@ startAdornment={
 <TextField
   id="$1"
   label="$2"${3:
-  variant="${4|standard,outlined,filled|}"}${5:
+  variant="${4|outlined,filled,standard|}"}${5:
   color="${6|primary,secondary|}"}${7:
   margin="${8|none,dense,normal|}"}${9:
   sizes="${10|small,medium|}"}
@@ -922,7 +930,7 @@ startAdornment={
 <TextField
   id="$1"
   label="$2"${3:
-  variant="${4|standard,outlined,filled|}"}${5:
+  variant="${4|outlined,filled,standard|}"}${5:
   color="${6|primary,secondary|}"}${7:
   margin="${8|none,dense,normal|}"}${9:
   sizes="${10|small,medium|}"}
@@ -931,7 +939,7 @@ startAdornment={
 />
 ```
 
-### `muiTextFieldSelect`: &lt;TextField select&gt;
+### `muiTextFieldSelect`: MUI &lt;TextField select&gt;
 
 #### Controlled
 
@@ -958,7 +966,7 @@ startAdornment={
 />
 ```
 
-### `muiTextFieldVariant`: &lt;TextField&gt; with variant
+### `muiTextFieldVariant`: MUI &lt;TextField&gt; with variant
 
 #### Controlled
 
@@ -966,7 +974,7 @@ startAdornment={
 <TextField
   id="$1"
   label="$2"
-  variant="${3|standard,outlined,filled|}"
+  variant="${3|outlined,filled,standard|}"
   value={$4}
   onChange={$5}
   $6
@@ -979,13 +987,13 @@ startAdornment={
 <TextField
   id="$1"
   label="$2"
-  variant="${3|standard,outlined,filled|}"
+  variant="${3|outlined,filled,standard|}"
   defaultValue={$4}
   $5
 />
 ```
 
-### `muiTooltip`: &lt;Tooltip&gt;
+### `muiTooltip`: MUI &lt;Tooltip&gt;
 
 ```
 <Tooltip title="$1"$2>
@@ -993,10 +1001,10 @@ startAdornment={
 </Tooltip>
 ```
 
-### `muiTypography`: &lt;Typography&gt;
+### `muiTypography`: MUI &lt;Typography&gt;
 
 ```
-<Typography variant="${1|h1,h2,h3,h4,h5,h6,subtitle1,subtitle2,body1,body2,caption,button,overline,srOnly,inherit|}" ${2:color="${3|initial,inherit,primary,secondary,textPrimary,textSecondary,error|}"}$4>$TM_SELECTED_TEXT$0</Typography>
+<Typography variant="${1|body1,body2,button,caption,h1,h2,h3,h4,h5,h6,inherit,overline,subtitle1,subtitle2|}" ${2:color="${3|initial,inherit,primary,secondary,textPrimary,textSecondary,error|}"}$4>$TM_SELECTED_TEXT$0</Typography>
 ```
 
 <!-- snippetsend -->

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { colors } from './muiButton'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Dialog>'
+export const description = 'MUI <Dialog>'
 
 export const body = ({
   forPreview,

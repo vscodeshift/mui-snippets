@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SnippetOptions } from './index'
 import { variants } from './muiTextField'
 
-export const description = 'Material-UI <TextField> with variant'
+export const description = 'MUI <TextField> with variant'
 
 export const body = ({
   formControlMode,

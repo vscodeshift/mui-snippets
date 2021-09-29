@@ -8,7 +8,6 @@ export default function getExistingImports(document: vscode.TextDocument): {
   insertPosition: vscode.Position
   coreInsertPosition: vscode.Position | null
   iconsInsertPosition: vscode.Position | null
-  muiVersion: 4 | 5 | null
 } {
   const text = document.getText()
   const parser = getParserSync(document.uri.fsPath, { tokens: true })
@@ -17,7 +16,6 @@ export default function getExistingImports(document: vscode.TextDocument): {
   const components: Set<string> = new Set()
   const icons: Set<string> = new Set()
 
-  let muiVersion: 4 | 5 | null = null
   let insertLine = 0
   let coreInsertPosition: vscode.Position | null = null
   let iconsInsertPosition: vscode.Position | null = null
@@ -38,9 +36,7 @@ export default function getExistingImports(document: vscode.TextDocument): {
       if (node.loc) insertLine = node.loc.end.line
       const source = node.source.value
       if (typeof source !== 'string') return
-      if (source.startsWith('@material-ui/')) muiVersion = 4
-      else if (source.startsWith('@mui/')) muiVersion = 5
-      if (source === '@material-ui/core' || source === '@mui/material') {
+      if (source === '@mui/material') {
         for (const specifier of node.specifiers) {
           if (specifier.type !== 'ImportSpecifier') continue
           const { loc } = specifier
@@ -53,10 +49,7 @@ export default function getExistingImports(document: vscode.TextDocument): {
             components.add(local.name)
           }
         }
-      } else if (
-        source === '@material-ui/icons' ||
-        source === '@mui/icons-material'
-      ) {
+      } else if (source === '@mui/icons-material') {
         for (const specifier of node.specifiers) {
           if (specifier.type !== 'ImportSpecifier') continue
           const { loc } = specifier
@@ -70,15 +63,11 @@ export default function getExistingImports(document: vscode.TextDocument): {
           }
         }
       } else {
-        const match =
-          /^(@material-ui\/core|@material-ui\/icons|@mui\/material|@mui\/icons-material)\/([^/]+)/.exec(
-            source
-          )
+        const match = /^(@mui\/material|@mui\/icons-material)\/([^/]+)/.exec(
+          source
+        )
         if (match) {
-          if (
-            match[1] === '@material-ui/icons' ||
-            match[1] === '@mui/icons-material'
-          ) {
+          if (match[1] === '@mui/icons-material') {
             icons.add(match[2])
           } else {
             components.add(match[2])
@@ -92,6 +81,5 @@ export default function getExistingImports(document: vscode.TextDocument): {
     insertPosition: new vscode.Position(insertLine, 0),
     coreInsertPosition,
     iconsInsertPosition,
-    muiVersion,
   }
 }

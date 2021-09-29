@@ -4,7 +4,7 @@ import { SnippetOptions } from './index'
 import { labelPlacements } from './muiFormControl'
 
 export const description =
-  'Material-UI <Radio> with <FormControlLabel> with labelPlacement'
+  'MUI <Radio> with <FormControlLabel> with labelPlacement'
 
 export const body = ({
   $,

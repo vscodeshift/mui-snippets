@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SnippetOptions } from './index'
 import { variants, colors } from './muiButton'
 
-export const description = 'Material-UI <ButtonGroup>'
+export const description = 'MUI <ButtonGroup>'
 
 export const body = ({
   Components: { ButtonGroup, Button },

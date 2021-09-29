@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SnippetOptions } from './index'
 
-export const description = 'Material-UI <Slider> with discrete values'
+export const description = 'MUI <Slider> with discrete values'
 
 export const body = ({
   formControlMode,

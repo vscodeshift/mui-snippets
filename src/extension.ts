@@ -3,8 +3,6 @@ import loadSnippets from './snippets/index'
 import shallowEqual from 'shallowequal'
 import getExistingImports from './getExistingImports'
 import createSnippet from './createSnippet'
-import Path from 'path'
-import readPkgUp from 'read-pkg-up'
 import { InputSnippetOptions } from './snippets'
 
 class MaterialUICompletionItem extends vscode.CompletionItem {
@@ -15,33 +13,9 @@ class MaterialUICompletionItem extends vscode.CompletionItem {
 export async function activate(
   context: vscode.ExtensionContext
 ): Promise<void> {
-  const config = vscode.workspace.getConfiguration('material-ui-snippets')
-  if (config.get('showNotesOnStartup')) {
-    const message =
-      'Material-UI Snippets: automatic imports for snippets have been re-enabled now that the VSCode completions API has been improved.'
-    vscode.window.showInformationMessage(message)
-    config.update(
-      'showNotesOnStartup',
-      false,
-      vscode.ConfigurationTarget.Global
-    )
-  }
+  const config = vscode.workspace.getConfiguration('mui-snippets')
 
   const snippets = await loadSnippets()
-
-  async function getMuiVersion(
-    document: vscode.TextDocument
-  ): Promise<4 | 5 | null> {
-    const deps = (
-      await readPkgUp({
-        cwd: Path.dirname(document.fileName),
-      })
-    )?.packageJson?.dependencies
-    if (!deps) return null
-    if (Object.keys(deps).some((d) => d.startsWith('@mui/'))) return 5
-    if (Object.keys(deps).some((d) => d.startsWith('@material-ui/'))) return 4
-    return null
-  }
 
   async function getAdditionalTextEdits({
     components = [],
@@ -58,7 +32,6 @@ export async function activate(
     let insertPosition: vscode.Position = new vscode.Position(0, 0)
     let coreInsertPosition: vscode.Position | null = null
     let iconsInsertPosition: vscode.Position | null = null
-    let muiVersion: 4 | 5 | null = null
     try {
       ;({
         existingComponents,
@@ -66,7 +39,6 @@ export async function activate(
         insertPosition,
         coreInsertPosition,
         iconsInsertPosition,
-        muiVersion = (await getMuiVersion(document)) || 4,
       } = getExistingImports(document))
     } catch (error) {
       return []
@@ -77,9 +49,8 @@ export async function activate(
         coreInsertPosition || iconsInsertPosition ? 'top level' : 'second level'
     }
 
-    const corePath = muiVersion === 4 ? '@material-ui/core' : '@mui/material'
-    const iconsPath =
-      muiVersion === 4 ? '@material-ui/icons' : '@mui/icons-material'
+    const corePath = '@mui/material'
+    const iconsPath = '@mui/icons-material'
 
     const additionalTextEdits: vscode.TextEdit[] = []
     if (importPaths === 'second level') {
@@ -146,7 +117,7 @@ export async function activate(
           {
             cancellable: true,
             location: vscode.ProgressLocation.Notification,
-            title: `Inserting Material-UI ${description}...`,
+            title: `Inserting MUI ${description}...`,
           },
           async (
             progress: vscode.Progress<{
@@ -225,9 +196,7 @@ export async function activate(
           | MaterialUICompletionItem[]
           | vscode.CompletionList<MaterialUICompletionItem>
         > {
-          const config = vscode.workspace.getConfiguration(
-            'material-ui-snippets'
-          )
+          const config = vscode.workspace.getConfiguration('mui-snippets')
           return getCompletionItems({
             language: language as any, // eslint-disable-line @typescript-eslint/no-explicit-any
             formControlMode: config.get('formControlMode') || 'controlled',
