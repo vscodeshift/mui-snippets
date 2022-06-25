@@ -189,7 +189,9 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 ### `muiBox`: MUI &lt;Box&gt;
 
 ```
-<Box display="$1" mx="$2" my="$3" />
+<Box display="$1" mx="$2" my="$3" sx="$4"$5>
+  $6
+</Box>
 ```
 
 ### `muiButton`: MUI &lt;Button&gt;
@@ -567,10 +569,14 @@ endAdornment={
 ```
 <Link
   href="$1"
+  variant="${2|body1,body2,button,caption,h1,h2,h3,h4,h5,h6,inherit,overline,subtitle1,subtitle2|}"
+  underline="${3|hover,always,none|}"
   target="_blank"
-  underline="hover"
   rel="noopener noreferrer"
-/>
+  $4
+>
+  $5
+</Link>
 ```
 
 ### `muiMenu`: MUI &lt;Menu&gt;
@@ -603,7 +609,9 @@ endAdornment={
 ### `muiPaper`: MUI &lt;Paper&gt;
 
 ```
-<Paper elevation="$1" />
+<Paper variant="${1|elevation,outlined|}" elevation="$2"$3>
+  $4
+</Paper>
 ```
 
 ### `muiRadioGroup`: MUI &lt;FormControl&gt; with &lt;RadioGroup&gt;
