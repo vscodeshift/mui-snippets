@@ -87,6 +87,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiBox",
+        "title": "Insert MUI <Box>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiButton",
         "title": "Insert MUI <Button>",
         "category": "MUI Snippets"
@@ -227,6 +232,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiLink",
+        "title": "Insert MUI <Link>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiMenu",
         "title": "Insert MUI <Menu>",
         "category": "MUI Snippets"
@@ -239,6 +249,11 @@
       {
         "command": "extension.muiMenuPopupState",
         "title": "Insert MUI <Menu> for material-ui-popup-state",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiPaper",
+        "title": "Insert MUI <Paper>",
         "category": "MUI Snippets"
       },
       {

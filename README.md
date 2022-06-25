@@ -52,6 +52,7 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 - [`muiAppBarMenu`: MUI &lt;AppBar&gt; with menu icon](#muiappbarmenu-mui-appbar-with-menu-icon)
 - [`muiBottomNavigation`: MUI &lt;BottomNavigation&gt;](#muibottomnavigation-mui-bottomnavigation)
 - [`muiBottomNavigationAction`: MUI &lt;BottomNavigationAction&gt;](#muibottomnavigationaction-mui-bottomnavigationaction)
+- [`muiBox`: MUI &lt;Box&gt;](#muibox-mui-box)
 - [`muiButton`: MUI &lt;Button&gt;](#muibutton-mui-button)
 - [`muiButtonGroup`: MUI &lt;ButtonGroup&gt;](#muibuttongroup-mui-buttongroup)
 - [`muiButtonGroupSize`: MUI &lt;ButtonGroup&gt; with size](#muibuttongroupsize-mui-buttongroup-with-size)
@@ -80,9 +81,11 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 - [`muiIconButton`: MUI &lt;IconButton&gt;](#muiiconbutton-mui-iconbutton)
 - [`muiImageListSubheader`: MUI &lt;ImageList&gt; subheader](#muiimagelistsubheader-mui-imagelist-subheader)
 - [`muiImageListTilebar`: MUI &lt;ImageListTileBar&gt;](#muiimagelisttilebar-mui-imagelisttilebar)
+- [`muiLink`: MUI &lt;Link&gt;](#muilink-mui-link)
 - [`muiMenu`: MUI &lt;Menu&gt;](#muimenu-mui-menu)
 - [`muiMenuItem`: MUI &lt;MenuItem&gt;](#muimenuitem-mui-menuitem)
 - [`muiMenuPopupState`: MUI &lt;Menu&gt; for material-ui-popup-state](#muimenupopupstate-mui-menu-for-material-ui-popup-state)
+- [`muiPaper`: MUI &lt;Paper&gt;](#muipaper-mui-paper)
 - [`muiRadioGroup`: MUI &lt;FormControl&gt; with &lt;RadioGroup&gt;](#muiradiogroup-mui-formcontrol-with-radiogroup)
 - [`muiRadioLabel`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt;](#muiradiolabel-mui-radio-with-formcontrollabel)
 - [`muiRadioLabelPlacement`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt; with labelPlacement](#muiradiolabelplacement-mui-radio-with-formcontrollabel-with-labelplacement)
@@ -115,7 +118,7 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 ```
 <Accordion>
   <AccordionSummary
-    expandIcon={<ExpandMoreIcon />}
+    expandIcon={<ExpandMore />}
     aria-label="${1:Expand}"
     aria-controls="$2-content"
     id="$2-header"
@@ -181,6 +184,12 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 
 ```
 <BottomNavigationAction label="$1" value={$2} icon={$3}$4 />
+```
+
+### `muiBox`: MUI &lt;Box&gt;
+
+```
+<Box display="$1" mx="$2" my="$3" />
 ```
 
 ### `muiButton`: MUI &lt;Button&gt;
@@ -553,6 +562,17 @@ endAdornment={
 />
 ```
 
+### `muiLink`: MUI &lt;Link&gt;
+
+```
+<Link
+  href="$1"
+  target="_blank"
+  underline="hover"
+  rel="noopener noreferrer"
+/>
+```
+
 ### `muiMenu`: MUI &lt;Menu&gt;
 
 ```
@@ -578,6 +598,12 @@ endAdornment={
 >
   $4
 </Menu>
+```
+
+### `muiPaper`: MUI &lt;Paper&gt;
+
+```
+<Paper elevation="$1" />
 ```
 
 ### `muiRadioGroup`: MUI &lt;FormControl&gt; with &lt;RadioGroup&gt;
