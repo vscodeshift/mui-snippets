@@ -50,6 +50,7 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 - [`muiAccordionControlled`: MUI controlled &lt;Accordion&gt;](#muiaccordioncontrolled-mui-controlled-accordion)
 - [`muiAppBar`: MUI &lt;AppBar&gt;](#muiappbar-mui-appbar)
 - [`muiAppBarMenu`: MUI &lt;AppBar&gt; with menu icon](#muiappbarmenu-mui-appbar-with-menu-icon)
+- [`muiAvatar`: MUI &lt;Avatar&gt;](#muiavatar-mui-avatar)
 - [`muiBottomNavigation`: MUI &lt;BottomNavigation&gt;](#muibottomnavigation-mui-bottomnavigation)
 - [`muiBottomNavigationAction`: MUI &lt;BottomNavigationAction&gt;](#muibottomnavigationaction-mui-bottomnavigationaction)
 - [`muiBox`: MUI &lt;Box&gt;](#muibox-mui-box)
@@ -60,13 +61,17 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 - [`muiButtonSize`: MUI &lt;Button&gt; with size](#muibuttonsize-mui-button-with-size)
 - [`muiButtonText`: MUI text &lt;Button&gt;](#muibuttontext-mui-text-button)
 - [`muiButtonWithIcon`: MUI &lt;Button&gt; with icon and label](#muibuttonwithicon-mui-button-with-icon-and-label)
+- [`muiCard`: MUI &lt;Card&gt;](#muicard-mui-card)
 - [`muiCardHeader`: MUI &lt;CardHeader&gt;](#muicardheader-mui-cardheader)
 - [`muiCardMedia`: MUI &lt;CardMedia&gt;](#muicardmedia-mui-cardmedia)
 - [`muiCheckboxLabel`: MUI &lt;Checkbox&gt; with &lt;FormControlLabel&gt;](#muicheckboxlabel-mui-checkbox-with-formcontrollabel)
 - [`muiCheckboxLabelPlacement`: MUI &lt;Checkbox&gt; with &lt;FormControlLabel&gt;](#muicheckboxlabelplacement-mui-checkbox-with-formcontrollabel)
+- [`muiChip`: MUI &lt;Chip&gt;](#muichip-mui-chip)
 - [`muiContainer`: MUI &lt;Container&gt;](#muicontainer-mui-container)
 - [`muiDialog`: MUI &lt;Dialog&gt;](#muidialog-mui-dialog)
 - [`muiDialogSimple`: MUI &lt;Dialog&gt;](#muidialogsimple-mui-dialog)
+- [`muiDivider`: MUI &lt;Divider&gt;](#muidivider-mui-divider)
+- [`muiDividerWithText`: MUI &lt;Divider&gt;](#muidividerwithtext-mui-divider)
 - [`muiDrawerPermanent`: MUI permanent &lt;Drawer&gt;](#muidrawerpermanent-mui-permanent-drawer)
 - [`muiDrawerPersistent`: MUI persistent &lt;Drawer&gt;](#muidrawerpersistent-mui-persistent-drawer)
 - [`muiDrawerTemporary`: MUI temporary &lt;Drawer&gt;](#muidrawertemporary-mui-temporary-drawer)
@@ -90,6 +95,7 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 - [`muiRadioLabel`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt;](#muiradiolabel-mui-radio-with-formcontrollabel)
 - [`muiRadioLabelPlacement`: MUI &lt;Radio&gt; with &lt;FormControlLabel&gt; with labelPlacement](#muiradiolabelplacement-mui-radio-with-formcontrollabel-with-labelplacement)
 - [`muiSelectItem`: MUI &lt;MenuItem&gt; inside &lt;Select&gt;](#muiselectitem-mui-menuitem-inside-select)
+- [`muiSkeleton`: MUI &lt;Skeleton&gt;](#muiskeleton-mui-skeleton)
 - [`muiSliderContinuous`: MUI &lt;Slider&gt; with continuous values](#muislidercontinuous-mui-slider-with-continuous-values)
 - [`muiSliderDiscrete`: MUI &lt;Slider&gt; with discrete values](#muisliderdiscrete-mui-slider-with-discrete-values)
 - [`muiSnackbar`: MUI &lt;Snackbar&gt;](#muisnackbar-mui-snackbar)
@@ -103,6 +109,7 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 - [`muiSwitch`: MUI &lt;Switch&gt;](#muiswitch-mui-switch)
 - [`muiSwitchLabel`: MUI &lt;Switch&gt; with &lt;FormControlLabel&gt;](#muiswitchlabel-mui-switch-with-formcontrollabel)
 - [`muiSwitchLabelPlacement`: MUI &lt;Switch&gt; with &lt;FormControlLabel&gt; with labelPlacement](#muiswitchlabelplacement-mui-switch-with-formcontrollabel-with-labelplacement)
+- [`muiTable`: MUI &lt;Table&gt;](#muitable-mui-table)
 - [`muiTabPanel`: MUI &lt;TabPanel&gt;](#muitabpanel-mui-tabpanel)
 - [`muiTabs`: MUI &lt;Tabs&gt;](#muitabs-mui-tabs)
 - [`muiTabsScrollable`: MUI scrollable &lt;Tabs&gt;](#muitabsscrollable-mui-scrollable-tabs)
@@ -170,6 +177,12 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
     </Typography>
   </Toolbar>
 </AppBar>
+```
+
+### `muiAvatar`: MUI &lt;Avatar&gt;
+
+```
+<Avatar variant="${1|circular,rounded,square|}" src="$2" alt="$3" sx={{ width: '$4', height: '$5' }}$6 />
 ```
 
 ### `muiBottomNavigation`: MUI &lt;BottomNavigation&gt;
@@ -269,6 +282,26 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 </Button>
 ```
 
+### `muiCard`: MUI &lt;Card&gt;
+
+```
+<Card variant="${1|outlined,elevation|}"$2>${3:
+  <CardContent>
+    $4
+  </CardContent>}${5:
+  <CardActions>
+    <Button
+      variant="${6|text,contained,outlined|}"
+      color="${7|primary,secondary,inherit,success,error,info,warning|}"
+      size="${8|small,medium,large|}"
+      onClick={$9\}
+    >${10:
+      Learn more}
+    </Button>
+  </CardActions>}
+</Card>
+```
+
 ### `muiCardHeader`: MUI &lt;CardHeader&gt;
 
 ```
@@ -363,6 +396,12 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 />
 ```
 
+### `muiChip`: MUI &lt;Chip&gt;
+
+```
+<Chip variant="${1|filled,outlined|}" sizes="${2|medium,small|}" colors="${3|default,primary,secondary,error,info,success,warning|}" label="$4"$5 />
+```
+
 ### `muiContainer`: MUI &lt;Container&gt;
 
 ```
@@ -400,6 +439,28 @@ For Material-UI v4 you'll need [`material-ui-snippets`](https://github.com/vscod
 <Dialog open={$1} onClose={$2} aria-labelledby="$3">
   $4
 </Dialog>
+```
+
+### `muiDivider`: MUI &lt;Divider&gt;
+
+```
+<Divider
+  variant="${1|fullWidth,inset,middle|}"
+  orientation="${2|horizontal,vertical|}"
+  $3
+/>
+```
+
+### `muiDividerWithText`: MUI &lt;Divider&gt;
+
+```
+<Divider
+  textAlign="${1|center,left,right|}"
+  orientation="${2|horizontal,vertical|}"
+  $3
+>
+  $4
+</Divider>
 ```
 
 ### `muiDrawerPermanent`: MUI permanent &lt;Drawer&gt;
@@ -647,6 +708,12 @@ endAdornment={
 <MenuItem value={$1}$2>$3</MenuItem>
 ```
 
+### `muiSkeleton`: MUI &lt;Skeleton&gt;
+
+```
+<Skeleton variant="${1|text,circular,rectangular|}" width="$2" height="$3" animation="${4|pulse,wave,false|}"$5 />
+```
+
 ### `muiSliderContinuous`: MUI &lt;Slider&gt; with continuous values
 
 #### Controlled
@@ -882,6 +949,34 @@ startAdornment={
     />
   }
 />
+```
+
+### `muiTable`: MUI &lt;Table&gt;
+
+```
+${1:<TableContainer component={{ "displayName": 'Paper' \}\}>
+  <Table aria-label="${2:simple table}">${3:
+    <TableHead>
+      <TableRow>
+        <TableCell>$4</TableCell>
+        <TableCell align="${5:right}">$6</TableCell>${7:
+        <TableCell align="${8:right}">$9</TableCell>}
+      </TableRow>
+    </TableHead>}${10:
+    <TableBody>
+      <TableRow>
+        <TableCell component="${11:th}" scope="${12:row}">$13</TableCell>
+        <TableCell align="${14:right}">$15</TableCell>${16:
+        <TableCell align="${17:right}">$18</TableCell>}
+      </TableRow>${19:
+      <TableRow>
+        <TableCell component="${20:th}" scope="${21:row}">$22</TableCell>
+        <TableCell align="${23:right}">$24</TableCell>${25:
+        <TableCell align="${26:right}">$27</TableCell>}
+      </TableRow>}
+    </TableBody>}
+  </Table>
+</TableContainer>}
 ```
 
 ### `muiTabPanel`: MUI &lt;TabPanel&gt;

@@ -3,7 +3,7 @@ import { SnippetOptions } from './index'
 
 export const description = 'MUI <Typography>'
 
-const variants = [
+export const variants = [
   'body1',
   'body2',
   'button',

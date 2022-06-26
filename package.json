@@ -77,6 +77,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiAvatar",
+        "title": "Insert MUI <Avatar>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiBottomNavigation",
         "title": "Insert MUI <BottomNavigation>",
         "category": "MUI Snippets"
@@ -127,6 +132,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiCard",
+        "title": "Insert MUI <Card>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiCardHeader",
         "title": "Insert MUI <CardHeader>",
         "category": "MUI Snippets"
@@ -147,6 +157,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiChip",
+        "title": "Insert MUI <Chip>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiContainer",
         "title": "Insert MUI <Container>",
         "category": "MUI Snippets"
@@ -159,6 +174,16 @@
       {
         "command": "extension.muiDialogSimple",
         "title": "Insert MUI <Dialog>",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiDivider",
+        "title": "Insert MUI <Divider>",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiDividerWithText",
+        "title": "Insert MUI <Divider>",
         "category": "MUI Snippets"
       },
       {
@@ -277,6 +302,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiSkeleton",
+        "title": "Insert MUI <Skeleton>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiSliderContinuous",
         "title": "Insert MUI <Slider> with continuous values",
         "category": "MUI Snippets"
@@ -339,6 +369,11 @@
       {
         "command": "extension.muiSwitchLabelPlacement",
         "title": "Insert MUI <Switch> with <FormControlLabel> with labelPlacement",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiTable",
+        "title": "Insert MUI <Table>",
         "category": "MUI Snippets"
       },
       {
