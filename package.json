@@ -1,10 +1,10 @@
 {
-  "name": "mui-snippets",
-  "version": "0.0.0-development",
+  "name": "mui-snippets-updated",
+  "version": "1.0.0",
   "displayName": "MUI Snippets",
   "description": "Code snippets for MUI",
   "icon": "icon.png",
-  "publisher": "vscodeshift",
+  "publisher": "heIsThePirate",
   "engines": {
     "vscode": "^1.51.0"
   },
@@ -506,7 +506,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vscodeshift/mui-snippets.git"
+    "url": "https://github.com/heIsThePirate/mui-snippets.git"
   },
   "keywords": [
     "vscode",
@@ -516,9 +516,9 @@
   "author": "Andy Edwards",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vscodeshift/mui-snippets/issues"
+    "url": "https://github.com/heIsThePirate/mui-snippets/issues"
   },
-  "homepage": "https://github.com/vscodeshift/mui-snippets#readme",
+  "homepage": "https://github.com/heIsThePirate/mui-snippets#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
