@@ -1,10 +1,10 @@
 {
-  "name": "mui-snippets",
-  "version": "0.0.0-development",
+  "name": "mui-snippets-updated",
+  "version": "1.0.0",
   "displayName": "MUI Snippets",
   "description": "Code snippets for MUI",
   "icon": "icon.png",
-  "publisher": "vscodeshift",
+  "publisher": "heIsThePirate",
   "engines": {
     "vscode": "^1.51.0"
   },
@@ -77,6 +77,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiAvatar",
+        "title": "Insert MUI <Avatar>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiBottomNavigation",
         "title": "Insert MUI <BottomNavigation>",
         "category": "MUI Snippets"
@@ -84,6 +89,11 @@
       {
         "command": "extension.muiBottomNavigationAction",
         "title": "Insert MUI <BottomNavigationAction>",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiBox",
+        "title": "Insert MUI <Box>",
         "category": "MUI Snippets"
       },
       {
@@ -122,6 +132,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiCard",
+        "title": "Insert MUI <Card>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiCardHeader",
         "title": "Insert MUI <CardHeader>",
         "category": "MUI Snippets"
@@ -142,6 +157,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiChip",
+        "title": "Insert MUI <Chip>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiContainer",
         "title": "Insert MUI <Container>",
         "category": "MUI Snippets"
@@ -154,6 +174,16 @@
       {
         "command": "extension.muiDialogSimple",
         "title": "Insert MUI <Dialog>",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiDivider",
+        "title": "Insert MUI <Divider>",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiDividerWithText",
+        "title": "Insert MUI <Divider>",
         "category": "MUI Snippets"
       },
       {
@@ -227,6 +257,11 @@
         "category": "MUI Snippets"
       },
       {
+        "command": "extension.muiLink",
+        "title": "Insert MUI <Link>",
+        "category": "MUI Snippets"
+      },
+      {
         "command": "extension.muiMenu",
         "title": "Insert MUI <Menu>",
         "category": "MUI Snippets"
@@ -239,6 +274,11 @@
       {
         "command": "extension.muiMenuPopupState",
         "title": "Insert MUI <Menu> for material-ui-popup-state",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiPaper",
+        "title": "Insert MUI <Paper>",
         "category": "MUI Snippets"
       },
       {
@@ -259,6 +299,11 @@
       {
         "command": "extension.muiSelectItem",
         "title": "Insert MUI <MenuItem> inside <Select>",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiSkeleton",
+        "title": "Insert MUI <Skeleton>",
         "category": "MUI Snippets"
       },
       {
@@ -324,6 +369,11 @@
       {
         "command": "extension.muiSwitchLabelPlacement",
         "title": "Insert MUI <Switch> with <FormControlLabel> with labelPlacement",
+        "category": "MUI Snippets"
+      },
+      {
+        "command": "extension.muiTable",
+        "title": "Insert MUI <Table>",
         "category": "MUI Snippets"
       },
       {
@@ -456,7 +506,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vscodeshift/mui-snippets.git"
+    "url": "https://github.com/heIsThePirate/mui-snippets.git"
   },
   "keywords": [
     "vscode",
@@ -466,9 +516,9 @@
   "author": "Andy Edwards",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vscodeshift/mui-snippets/issues"
+    "url": "https://github.com/heIsThePirate/mui-snippets/issues"
   },
-  "homepage": "https://github.com/vscodeshift/mui-snippets#readme",
+  "homepage": "https://github.com/heIsThePirate/mui-snippets#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
